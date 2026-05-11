@@ -113,7 +113,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <TooltipProvider>
+        <div className="min-h-screen flex flex-col">
+          <div className="flex-1">
+            <Outlet />
+          </div>
+          <Footer />
+        </div>
+        <Toaster richColors position="top-center" />
+      </TooltipProvider>
     </QueryClientProvider>
   );
 }
