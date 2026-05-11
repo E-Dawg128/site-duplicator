@@ -1,26 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Contact from "@/components/Contact";
+import SeafoodBoil from "@/components/SeafoodBoil";
+import MenuSection from "@/components/MenuSection";
+import SummerSpecials from "@/components/SummerSpecials";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Rave Bae Eats — Delicious & Nutritious" },
+      {
+        name: "description",
+        content:
+          "Gourmet meal prep, private chef, and catering services. Fresh, never frozen, customized to your palate.",
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <SummerSpecials />
+      <About />
+      <Services />
+      <MenuSection />
+      <SeafoodBoil />
+      <Contact />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
