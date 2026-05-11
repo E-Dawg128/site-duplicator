@@ -75,14 +75,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Rave Bae Eats — Delicious & Nutritious" },
+      {
+        name: "description",
+        content:
+          "Gourmet meal prep, private chef, and catering services. Fresh, never frozen, customized to your palate.",
+      },
+      { property: "og:title", content: "Rave Bae Eats" },
+      { property: "og:description", content: "Delicious & Nutritious meal prep and catering." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
