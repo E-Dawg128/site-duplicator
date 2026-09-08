@@ -73,10 +73,10 @@ const MenuSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Meal Prep Menu */}
             <Card 
-              className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
+              className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
               onClick={() => openModal(0)}
             >
-              <CardContent className="p-0">
+              <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
                 <div className="relative">
                   <img
                     src={menuImages[0].src}
