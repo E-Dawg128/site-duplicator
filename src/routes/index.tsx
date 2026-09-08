@@ -6,7 +6,7 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import SeafoodBoil from "@/components/SeafoodBoil";
 import MenuSection from "@/components/MenuSection";
-import SummerSpecials from "@/components/SummerSpecials";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -27,7 +27,7 @@ function Index() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <SummerSpecials />
+      
       <About />
       <Services />
       <MenuSection />

@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+
 import {
   Carousel,
   CarouselContent,
@@ -43,9 +43,6 @@ const Hero = () => {
     };
   }, [nextSlide]);
 
-  const scrollToSummerSpecials = () => {
-    document.getElementById("summer-specials")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
@@ -109,16 +106,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bouncing Arrow */}
-      <div 
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 text-white cursor-pointer transition-opacity duration-500 flex flex-col items-center ${
-          showArrow ? 'opacity-100' : 'opacity-0'
-        }`}
-        onClick={scrollToSummerSpecials}
-      >
-        <div className="text-center mb-2 text-lg font-medium text-primary">Summer Specials</div>
-        <ChevronDown className="w-8 h-8 animate-bounce" />
-      </div>
     </div>
   );
 };
