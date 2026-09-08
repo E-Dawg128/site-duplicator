@@ -106,7 +106,7 @@ const MenuSection = () => {
                     Deliveries Monday - Wednesday. Pick a menu, mix or match, and contact us to order or to inquire about a custom menu.
                   </p>
                 </div>
-                <div className="grid grid-cols-1 gap-4 px-6 pb-6">
+                <div className="grid grid-cols-1 gap-4 px-6 pb-6 md:w-1/2 mx-auto">
                   {weeklyMenuImages.map((menu, index) => (
                     <div
                       key={index}
