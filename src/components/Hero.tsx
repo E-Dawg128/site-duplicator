@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+
 import {
   Carousel,
   CarouselContent,
