@@ -13,8 +13,8 @@ const MenuSection = () => {
 
   const menuImages = [
     {
-      src: "/lovable-uploads/a9ad863f-71fb-4b03-bc68-13038dae48ee.png",
-      alt: "Rave Bae Meal Prep Packages - Meats, Seafood & Sides",
+      src: mealPrepPackagesAsset.url,
+      alt: "Rave Bae Meal Prep Packages - Weekly and Monthly Menu Plans",
       title: "Meal Prep Packages"
     },
     {
