@@ -157,8 +157,8 @@ const MenuSection = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-7xl max-h-[90vh] w-full">
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 overflow-auto">
+          <div className="relative w-full max-w-7xl h-[85vh] max-h-[85vh] flex items-center justify-center">
             {/* Close button */}
             <Button
               onClick={closeModal}
@@ -189,13 +189,11 @@ const MenuSection = () => {
             </Button>
 
             {/* Menu image */}
-            <div className="flex items-center justify-center h-full">
-              <img
-                src={allMenuImages[activeMenuIndex].src}
-                alt={allMenuImages[activeMenuIndex].alt}
-                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-              />
-            </div>
+            <img
+              src={allMenuImages[activeMenuIndex].src}
+              alt={allMenuImages[activeMenuIndex].alt}
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+            />
           </div>
         </div>
       )}
