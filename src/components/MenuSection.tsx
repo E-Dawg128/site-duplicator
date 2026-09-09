@@ -23,20 +23,13 @@ const MenuSection = () => {
     }
   ];
 
-  const weeklyMenuImages = [
-    {
-      src: weeklyMenu1Asset.url,
-      alt: "Rave Bae Weekly Menu 1 for Week of 9-13",
-      title: "New Menus for the Week of 9-13 - Menu 1"
-    },
-    {
-      src: weeklyMenu2Asset.url,
-      alt: "Rave Bae Weekly Menu 2 for Week of 9-13",
-      title: "New Menus for the Week of 9-13 - Menu 2"
-    }
-  ];
+  const weeklyMenuImage = {
+    src: weeklyMenuAsset.url,
+    alt: "Rave Bae Weekly Meal Prep Menu for Week of 9-13",
+    title: "New Menus for the Week of 9-13"
+  };
 
-  const allMenuImages = [menuImages[0], ...weeklyMenuImages, menuImages[1]];
+  const allMenuImages = [menuImages[0], weeklyMenuImage, menuImages[1]];
 
   const openModal = (index: number) => {
     setActiveMenuIndex(index);
