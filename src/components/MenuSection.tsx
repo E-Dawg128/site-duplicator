@@ -22,8 +22,8 @@ const MenuSection = () => {
 
   const weeklyMenuImage = {
     src: weeklyMenuAsset.url,
-    alt: "Rave Bae Weekly Meal Prep Menu for Week of 9-13",
-    title: "New Menus for the Week of 9-13"
+    alt: "Rave Bae This Week's Menu",
+    title: "THIS WEEK'S MENU"
   };
 
   const fallSpecialsImage = {
