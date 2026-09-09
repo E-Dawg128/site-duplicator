@@ -14,7 +14,7 @@ const MenuSection = () => {
   const menuImages = [
     {
       src: mealPrepPackagesAsset.url,
-      alt: "Rave Bae Meal Prep Packages - Weekly and Monthly Menu Plans",
+      alt: "Rave Bae Fall Meal Prep Packages - Weekly and Monthly Menu Plans",
       title: "Meal Prep Packages"
     },
     {
