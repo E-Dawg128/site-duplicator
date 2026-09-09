@@ -15,11 +15,6 @@ const MenuSection = () => {
       src: mealPrepPackagesAsset.url,
       alt: "Rave Bae Fall Meal Prep Packages - Weekly and Monthly Menu Plans",
       title: "Meal Prep Packages"
-    },
-    {
-      src: "/lovable-uploads/d456f5ba-9909-4cdf-8e42-3cbe7cb2b00c.png", 
-      alt: "Rave Bae Eats Catering Menu - Pastas, Trays & Appetizers",
-      title: "Catering Menu"
     }
   ];
 
@@ -29,7 +24,7 @@ const MenuSection = () => {
     title: "New Menus for the Week of 9-13"
   };
 
-  const allMenuImages = [menuImages[0], weeklyMenuImage, menuImages[1]];
+  const allMenuImages = [menuImages[0], weeklyMenuImage];
 
   const openModal = (index: number) => {
     setActiveMenuIndex(index);
@@ -119,29 +114,6 @@ const MenuSection = () => {
               </CardContent>
             </Card>
 
-            {/* Catering Menu */}
-            <Card 
-              className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
-              onClick={() => openModal(2)}
-            >
-              <CardContent className="p-0">
-                <div className="relative">
-                  <img
-                    src={menuImages[1].src}
-                    alt={menuImages[1].alt}
-                    className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                      <span className="text-sm font-medium text-foreground">Click to view full size</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-center text-foreground">{menuImages[1].title}</h3>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
