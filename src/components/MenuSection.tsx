@@ -100,24 +100,21 @@ const MenuSection = () => {
                   </p>
                 </div>
                 <div className="grid grid-cols-1 gap-4 px-6 pb-6 md:w-1/2 mx-auto">
-                  {weeklyMenuImages.map((menu, index) => (
-                    <div
-                      key={index}
-                      className="relative cursor-pointer group overflow-hidden rounded-lg"
-                      onClick={() => openModal(index + 1)}
-                    >
-                      <img
-                        src={menu.src}
-                        alt={menu.alt}
-                        className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                          <span className="text-sm font-medium text-foreground">Click to view full size</span>
-                        </div>
+                  <div
+                    className="relative cursor-pointer group overflow-hidden rounded-lg"
+                    onClick={() => openModal(1)}
+                  >
+                    <img
+                      src={weeklyMenuImage.src}
+                      alt={weeklyMenuImage.alt}
+                      className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <span className="text-sm font-medium text-foreground">Click to view full size</span>
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </CardContent>
             </Card>
