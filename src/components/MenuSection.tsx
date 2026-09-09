@@ -122,7 +122,7 @@ const MenuSection = () => {
             {/* Catering Menu */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
-              onClick={() => openModal(3)}
+              onClick={() => openModal(2)}
             >
               <CardContent className="p-0">
                 <div className="relative">
