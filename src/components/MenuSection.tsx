@@ -70,10 +70,34 @@ const MenuSection = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Meal Prep Menu */}
+            {/* Fall Specials */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
               onClick={() => openModal(0)}
+            >
+              <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
+                <div className="relative">
+                  <img
+                    src={fallSpecialsImage.src}
+                    alt={fallSpecialsImage.alt}
+                    className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <span className="text-sm font-medium text-foreground">Click to view full size</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-center text-foreground">{fallSpecialsImage.title}</h3>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Meal Prep Menu */}
+            <Card 
+              className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
+              onClick={() => openModal(1)}
             >
               <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
                 <div className="relative">
@@ -108,7 +132,7 @@ const MenuSection = () => {
                 <div className="grid grid-cols-1 gap-4 px-6 pb-6">
                   <div
                     className="relative cursor-pointer group overflow-hidden rounded-lg"
-                    onClick={() => openModal(1)}
+                    onClick={() => openModal(2)}
                   >
                     <img
                       src={weeklyMenuImage.src}
@@ -125,31 +149,8 @@ const MenuSection = () => {
               </CardContent>
             </Card>
 
-            {/* Fall Specials */}
-            <Card 
-              className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
-              onClick={() => openModal(2)}
-            >
-              <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
-                <div className="relative">
-                  <img
-                    src={fallSpecialsImage.src}
-                    alt={fallSpecialsImage.alt}
-                    className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                      <span className="text-sm font-medium text-foreground">Click to view full size</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-center text-foreground">{fallSpecialsImage.title}</h3>
-                </div>
-              </CardContent>
-            </Card>
-
           </div>
+
 
         </div>
       </section>
