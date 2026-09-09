@@ -67,7 +67,7 @@ const MenuSection = () => {
             Explore our delicious meal prep and catering options. Click on any menu to view it in full screen.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Meal Prep Menu */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
