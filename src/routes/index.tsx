@@ -27,10 +27,10 @@ function Index() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      
+
       <About />
-      <Services />
       <MenuSection />
+      <Services />
       <SeafoodBoil />
       <Contact />
     </div>
