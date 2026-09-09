@@ -32,7 +32,9 @@ const MenuSection = () => {
     title: "Fall Specials"
   };
 
-  const allMenuImages = [menuImages[0], weeklyMenuImage, fallSpecialsImage];
+  const allMenuImages = [fallSpecialsImage, menuImages[0], weeklyMenuImage];
+
+
 
 
   const openModal = (index: number) => {
