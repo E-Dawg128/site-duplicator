@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import mealPrepPackagesAsset from "@/assets/meal-prep-menu-2.PNG.asset.json";
+import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
 import weeklyMenu1Asset from "@/assets/9-14-26_menu_1.jpeg.asset.json";
 import weeklyMenu2Asset from "@/assets/9-14-26_menu_2.jpeg.asset.json";
 
@@ -14,7 +14,7 @@ const MenuSection = () => {
   const menuImages = [
     {
       src: mealPrepPackagesAsset.url,
-      alt: "Rave Bae Meal Prep Packages - Weekly and Monthly Menu Plans",
+      alt: "Rave Bae Fall Meal Prep Packages - Weekly and Monthly Menu Plans",
       title: "Meal Prep Packages"
     },
     {
