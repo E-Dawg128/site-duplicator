@@ -5,6 +5,8 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
 import weeklyMenuAsset from "@/assets/new_9-14-26_meal-prep.PNG.asset.json";
+import fallSpecialsAsset from "@/assets/fallspecial.JPEG.asset.json";
+
 
 const MenuSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +26,14 @@ const MenuSection = () => {
     title: "New Menus for the Week of 9-13"
   };
 
-  const allMenuImages = [menuImages[0], weeklyMenuImage];
+  const fallSpecialsImage = {
+    src: fallSpecialsAsset.url,
+    alt: "Rave Bae Fall Blowout Specials - Meal Prep Deals",
+    title: "Fall Specials"
+  };
+
+  const allMenuImages = [menuImages[0], weeklyMenuImage, fallSpecialsImage];
+
 
   const openModal = (index: number) => {
     setActiveMenuIndex(index);
@@ -58,7 +67,7 @@ const MenuSection = () => {
             Explore our delicious meal prep and catering options. Click on any menu to view it in full screen.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Meal Prep Menu */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
@@ -114,7 +123,32 @@ const MenuSection = () => {
               </CardContent>
             </Card>
 
+            {/* Fall Specials */}
+            <Card 
+              className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
+              onClick={() => openModal(2)}
+            >
+              <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
+                <div className="relative">
+                  <img
+                    src={fallSpecialsImage.src}
+                    alt={fallSpecialsImage.alt}
+                    className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <span className="text-sm font-medium text-foreground">Click to view full size</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-center text-foreground">{fallSpecialsImage.title}</h3>
+                </div>
+              </CardContent>
+            </Card>
+
           </div>
+
         </div>
       </section>
 
