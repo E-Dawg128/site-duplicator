@@ -26,7 +26,14 @@ const MenuSection = () => {
     title: "New Menus for the Week of 9-13"
   };
 
-  const allMenuImages = [menuImages[0], weeklyMenuImage];
+  const fallSpecialsImage = {
+    src: fallSpecialsAsset.url,
+    alt: "Rave Bae Fall Blowout Specials - Meal Prep Deals",
+    title: "Fall Specials"
+  };
+
+  const allMenuImages = [menuImages[0], weeklyMenuImage, fallSpecialsImage];
+
 
   const openModal = (index: number) => {
     setActiveMenuIndex(index);
