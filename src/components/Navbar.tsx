@@ -41,11 +41,11 @@ const Navbar = () => {
           About
         </Link>
       )}
-      <Link to="/" className="hover:text-secondary transition-colors" onClick={() => handleLinkClick("services")}>
-        Services
-      </Link>
       <Link to="/" className="hover:text-secondary transition-colors" onClick={() => handleLinkClick("menu")}>
         Menu
+      </Link>
+      <Link to="/" className="hover:text-secondary transition-colors" onClick={() => handleLinkClick("services")}>
+        Services
       </Link>
       <Link to="/" className="hover:text-secondary transition-colors" onClick={() => handleLinkClick("contact")}>
         Contact
