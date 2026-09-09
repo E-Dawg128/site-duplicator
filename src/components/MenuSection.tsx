@@ -22,8 +22,8 @@ const MenuSection = () => {
 
   const weeklyMenuImage = {
     src: weeklyMenuAsset.url,
-    alt: "Rave Bae Weekly Meal Prep Menu for Week of 9-13",
-    title: "New Menus for the Week of 9-13"
+    alt: "Rave Bae This Week's Menu",
+    title: "THIS WEEK'S MENU"
   };
 
   const fallSpecialsImage = {
@@ -123,7 +123,7 @@ const MenuSection = () => {
               <CardContent className="p-0">
                 <div className="p-6 pb-4">
                   <h3 className="text-2xl font-bold text-center text-foreground mb-2">
-                    New Menus for the Week of 9-13
+                    THIS WEEK'S MENU
                   </h3>
                   <p className="text-sm text-center text-muted-foreground">
                     Deliveries Monday - Wednesday. Pick a menu, mix or match, and contact us to order or to inquire about a custom menu.
