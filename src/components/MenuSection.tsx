@@ -15,11 +15,6 @@ const MenuSection = () => {
       src: mealPrepPackagesAsset.url,
       alt: "Rave Bae Fall Meal Prep Packages - Weekly and Monthly Menu Plans",
       title: "Meal Prep Packages"
-    },
-    {
-      src: "/lovable-uploads/d456f5ba-9909-4cdf-8e42-3cbe7cb2b00c.png", 
-      alt: "Rave Bae Eats Catering Menu - Pastas, Trays & Appetizers",
-      title: "Catering Menu"
     }
   ];
 
@@ -29,7 +24,7 @@ const MenuSection = () => {
     title: "New Menus for the Week of 9-13"
   };
 
-  const allMenuImages = [menuImages[0], weeklyMenuImage, menuImages[1]];
+  const allMenuImages = [menuImages[0], weeklyMenuImage];
 
   const openModal = (index: number) => {
     setActiveMenuIndex(index);
