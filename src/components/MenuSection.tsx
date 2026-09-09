@@ -4,8 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
-import weeklyMenu1Asset from "@/assets/9-14-26_menu_1.jpeg.asset.json";
-import weeklyMenu2Asset from "@/assets/9-14-26_menu_2.jpeg.asset.json";
+import weeklyMenuAsset from "@/assets/new_9-14-26_meal-prep.PNG.asset.json";
 
 const MenuSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,20 +23,13 @@ const MenuSection = () => {
     }
   ];
 
-  const weeklyMenuImages = [
-    {
-      src: weeklyMenu1Asset.url,
-      alt: "Rave Bae Weekly Menu 1 for Week of 9-13",
-      title: "New Menus for the Week of 9-13 - Menu 1"
-    },
-    {
-      src: weeklyMenu2Asset.url,
-      alt: "Rave Bae Weekly Menu 2 for Week of 9-13",
-      title: "New Menus for the Week of 9-13 - Menu 2"
-    }
-  ];
+  const weeklyMenuImage = {
+    src: weeklyMenuAsset.url,
+    alt: "Rave Bae Weekly Meal Prep Menu for Week of 9-13",
+    title: "New Menus for the Week of 9-13"
+  };
 
-  const allMenuImages = [menuImages[0], ...weeklyMenuImages, menuImages[1]];
+  const allMenuImages = [menuImages[0], weeklyMenuImage, menuImages[1]];
 
   const openModal = (index: number) => {
     setActiveMenuIndex(index);
@@ -108,24 +100,21 @@ const MenuSection = () => {
                   </p>
                 </div>
                 <div className="grid grid-cols-1 gap-4 px-6 pb-6 md:w-1/2 mx-auto">
-                  {weeklyMenuImages.map((menu, index) => (
-                    <div
-                      key={index}
-                      className="relative cursor-pointer group overflow-hidden rounded-lg"
-                      onClick={() => openModal(index + 1)}
-                    >
-                      <img
-                        src={menu.src}
-                        alt={menu.alt}
-                        className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                          <span className="text-sm font-medium text-foreground">Click to view full size</span>
-                        </div>
+                  <div
+                    className="relative cursor-pointer group overflow-hidden rounded-lg"
+                    onClick={() => openModal(1)}
+                  >
+                    <img
+                      src={weeklyMenuImage.src}
+                      alt={weeklyMenuImage.alt}
+                      className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <span className="text-sm font-medium text-foreground">Click to view full size</span>
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -133,7 +122,7 @@ const MenuSection = () => {
             {/* Catering Menu */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
-              onClick={() => openModal(3)}
+              onClick={() => openModal(2)}
             >
               <CardContent className="p-0">
                 <div className="relative">
