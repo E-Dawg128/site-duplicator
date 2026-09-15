@@ -25,6 +25,8 @@ const MenuSection = () => {
     alt: "Rave Bae Next Week's Meal Prep Menu",
     title: "NEXT WEEK'S MENU"
   };
+
+  const fallSpecialsImage = {
     src: fallSpecialsAsset.url,
     alt: "Rave Bae Fall Blowout Specials - Meal Prep Deals",
     title: "Fall Specials"
