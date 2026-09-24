@@ -125,8 +125,8 @@ const MenuSection = () => {
                   <h3 className="text-2xl font-bold text-center text-foreground mb-2">
                     NEXT WEEK'S MENU
                   </h3>
-                  <p className="text-sm text-center text-muted-foreground">
-                    Deliveries Monday Sept 28th - Wednesday Sept 30th. Pick a menu, mix or match, and contact us to order or to inquire about a custom menu.
+                  <p className="text-sm text-center text-muted-foreground whitespace-pre-line">
+                    {"DELIVERIES: SEPTEMBER 28th-30th\n\nChoose from this week's menus, mix & match your favorites.\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
                   </p>
                 </div>
                 <div className="grid grid-cols-1 gap-4 px-6 pb-6">
