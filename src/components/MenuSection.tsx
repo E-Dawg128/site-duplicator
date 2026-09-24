@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
-import weeklyMenuAsset from "@/assets/sept-20-weekly-menu.PNG.asset.json";
+import weeklyMenuAsset from "@/assets/Sept_27_week_menu.PNG.asset.json";
 import fallSpecialsAsset from "@/assets/fallspecial.JPEG.asset.json";
 
 
@@ -126,7 +126,7 @@ const MenuSection = () => {
                     NEXT WEEK'S MENU
                   </h3>
                   <p className="text-sm text-center text-muted-foreground">
-                    Deliveries Monday Sept 21st - Wednesday Sept 23rd. Pick a menu, mix or match, and contact us to order or to inquire about a custom menu.
+                    Deliveries Monday Sept 28th - Wednesday Sept 30th. Pick a menu, mix or match, and contact us to order or to inquire about a custom menu.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 gap-4 px-6 pb-6">
