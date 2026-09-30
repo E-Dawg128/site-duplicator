@@ -76,7 +76,7 @@ const MenuSection = () => {
             Explore our delicious meal prep and catering options. Click on any menu to view it in full screen.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] gap-8 max-w-7xl mx-auto">
             {/* Fall Specials */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
@@ -112,7 +112,7 @@ const MenuSection = () => {
                     {"DELIVERIES: OCTOBER 5th-7th\n\nChoose from this week's menus, mix & match your favorites.\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
                   </p>
                 </div>
-                <div className="grid grid-cols-1 gap-4 px-6 pb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 pb-6">
                   <div
                     className="relative cursor-pointer group overflow-hidden rounded-lg"
                     onClick={() => openModal(1)}
