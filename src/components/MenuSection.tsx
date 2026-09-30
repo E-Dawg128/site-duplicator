@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
-import weeklyMenuAsset from "@/assets/Sept_27_week_menu.PNG.asset.json";
+import weeklyMenu1Asset from "@/assets/10-4-26_menu-1.PNG.asset.json";
+import weeklyMenu2Asset from "@/assets/10-4-26_menu-2.PNG.asset.json";
 import fallSpecialsAsset from "@/assets/fallspecial.JPEG.asset.json";
 
 
