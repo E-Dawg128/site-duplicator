@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
-import weeklyMenuAsset from "@/assets/Sept_27_week_menu.PNG.asset.json";
+import weeklyMenu1Asset from "@/assets/10-4-26_menu-1.PNG.asset.json";
+import weeklyMenu2Asset from "@/assets/10-4-26_menu-2.PNG.asset.json";
 import fallSpecialsAsset from "@/assets/fallspecial.JPEG.asset.json";
 
 
@@ -20,10 +21,16 @@ const MenuSection = () => {
     }
   ];
 
-  const weeklyMenuImage = {
-    src: weeklyMenuAsset.url,
-    alt: "Rave Bae Next Week's Meal Prep Menu",
-    title: "NEXT WEEK'S MENU"
+  const weeklyMenu1Image = {
+    src: weeklyMenu1Asset.url,
+    alt: "Rave Bae Next Week's Meal Prep Menu 1",
+    title: "NEXT WEEK'S MENU - MENU 1"
+  };
+
+  const weeklyMenu2Image = {
+    src: weeklyMenu2Asset.url,
+    alt: "Rave Bae Next Week's Meal Prep Menu 2",
+    title: "NEXT WEEK'S MENU - MENU 2"
   };
 
   const fallSpecialsImage = {
@@ -32,7 +39,7 @@ const MenuSection = () => {
     title: "Fall Specials"
   };
 
-  const allMenuImages = [fallSpecialsImage, menuImages[0], weeklyMenuImage];
+  const allMenuImages = [fallSpecialsImage, weeklyMenu1Image, weeklyMenu2Image, menuImages[0]];
 
 
 
@@ -94,10 +101,56 @@ const MenuSection = () => {
               </CardContent>
             </Card>
 
+            {/* Weekly Special Menu */}
+            <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="p-6 pb-4">
+                  <h3 className="text-2xl font-bold text-center text-foreground mb-2">
+                    NEXT WEEK'S MENU
+                  </h3>
+                  <p className="text-sm text-center text-muted-foreground whitespace-pre-line">
+                    {"DELIVERIES: OCTOBER 5th-7th\n\nChoose from this week's menus, mix & match your favorites.\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 gap-4 px-6 pb-6">
+                  <div
+                    className="relative cursor-pointer group overflow-hidden rounded-lg"
+                    onClick={() => openModal(1)}
+                  >
+                    <img
+                      src={weeklyMenu1Image.src}
+                      alt={weeklyMenu1Image.alt}
+                      className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <span className="text-sm font-medium text-foreground">Click to view full size</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="relative cursor-pointer group overflow-hidden rounded-lg"
+                    onClick={() => openModal(2)}
+                  >
+                    <img
+                      src={weeklyMenu2Image.src}
+                      alt={weeklyMenu2Image.alt}
+                      className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <span className="text-sm font-medium text-foreground">Click to view full size</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Meal Prep Menu */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
-              onClick={() => openModal(1)}
+              onClick={() => openModal(3)}
             >
               <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
                 <div className="relative">
@@ -114,37 +167,6 @@ const MenuSection = () => {
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-center text-foreground">{menuImages[0].title}</h3>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Weekly Special Menu */}
-            <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="p-6 pb-4">
-                  <h3 className="text-2xl font-bold text-center text-foreground mb-2">
-                    NEXT WEEK'S MENU
-                  </h3>
-                  <p className="text-sm text-center text-muted-foreground whitespace-pre-line">
-                    {"DELIVERIES: SEPTEMBER 28th-30th\n\nChoose from this week's menus, mix & match your favorites.\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 gap-4 px-6 pb-6">
-                  <div
-                    className="relative cursor-pointer group overflow-hidden rounded-lg"
-                    onClick={() => openModal(2)}
-                  >
-                    <img
-                      src={weeklyMenuImage.src}
-                      alt={weeklyMenuImage.alt}
-                      className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <span className="text-sm font-medium text-foreground">Click to view full size</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>
