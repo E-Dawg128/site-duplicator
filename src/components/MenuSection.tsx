@@ -21,10 +21,16 @@ const MenuSection = () => {
     }
   ];
 
-  const weeklyMenuImage = {
-    src: weeklyMenuAsset.url,
-    alt: "Rave Bae Next Week's Meal Prep Menu",
-    title: "NEXT WEEK'S MENU"
+  const weeklyMenu1Image = {
+    src: weeklyMenu1Asset.url,
+    alt: "Rave Bae Next Week's Meal Prep Menu 1",
+    title: "NEXT WEEK'S MENU - MENU 1"
+  };
+
+  const weeklyMenu2Image = {
+    src: weeklyMenu2Asset.url,
+    alt: "Rave Bae Next Week's Meal Prep Menu 2",
+    title: "NEXT WEEK'S MENU - MENU 2"
   };
 
   const fallSpecialsImage = {
@@ -33,7 +39,7 @@ const MenuSection = () => {
     title: "Fall Specials"
   };
 
-  const allMenuImages = [fallSpecialsImage, menuImages[0], weeklyMenuImage];
+  const allMenuImages = [fallSpecialsImage, weeklyMenu1Image, weeklyMenu2Image, menuImages[0]];
 
 
 
