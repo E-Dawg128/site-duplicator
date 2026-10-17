@@ -4,8 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
-import weeklyMenu1Asset from "@/assets/10-4-26_menu-1.PNG.asset.json";
-import weeklyMenu2Asset from "@/assets/10-4-26_menu-2.PNG.asset.json";
+import weeklyMenuAsset from "@/assets/Oct_18-24-26_RBE_menu.PNG.asset.json";
 import fallSpecialsAsset from "@/assets/fallspecial.JPEG.asset.json";
 
 
@@ -21,16 +20,10 @@ const MenuSection = () => {
     }
   ];
 
-  const weeklyMenu1Image = {
-    src: weeklyMenu1Asset.url,
-    alt: "Rave Bae Next Week's Meal Prep Menu 1",
-    title: "NEXT WEEK'S MENU - MENU 1"
-  };
-
-  const weeklyMenu2Image = {
-    src: weeklyMenu2Asset.url,
-    alt: "Rave Bae Next Week's Meal Prep Menu 2",
-    title: "NEXT WEEK'S MENU - MENU 2"
+  const weeklyMenuImage = {
+    src: weeklyMenuAsset.url,
+    alt: "Rave Bae Next Week's Meal Prep Menu - Menu 1 and Menu 2",
+    title: "NEXT WEEK'S MENU"
   };
 
   const fallSpecialsImage = {
@@ -39,7 +32,7 @@ const MenuSection = () => {
     title: "Fall Specials"
   };
 
-  const allMenuImages = [fallSpecialsImage, weeklyMenu1Image, weeklyMenu2Image, menuImages[0]];
+  const allMenuImages = [fallSpecialsImage, weeklyMenuImage, menuImages[0]];
 
 
 
@@ -109,32 +102,17 @@ const MenuSection = () => {
                     NEXT WEEK'S MENU
                   </h3>
                   <p className="text-sm text-center text-muted-foreground whitespace-pre-line">
-                    {"DELIVERIES: OCTOBER 5th-7th\n\nChoose from this week's menus, mix & match your favorites.\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
+                    {"DELIVERIES: OCTOBER 19th-21st\n\nChoose from this week's menus, mix & match your favorites.\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 pb-6">
+                <div className="px-6 pb-6">
                   <div
                     className="relative cursor-pointer group overflow-hidden rounded-lg"
                     onClick={() => openModal(1)}
                   >
                     <img
-                      src={weeklyMenu1Image.src}
-                      alt={weeklyMenu1Image.alt}
-                      className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <span className="text-sm font-medium text-foreground">Click to view full size</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="relative cursor-pointer group overflow-hidden rounded-lg"
-                    onClick={() => openModal(2)}
-                  >
-                    <img
-                      src={weeklyMenu2Image.src}
-                      alt={weeklyMenu2Image.alt}
+                      src={weeklyMenuImage.src}
+                      alt={weeklyMenuImage.alt}
                       className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none">
@@ -150,7 +128,7 @@ const MenuSection = () => {
             {/* Meal Prep Menu */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
-              onClick={() => openModal(3)}
+              onClick={() => openModal(2)}
             >
               <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
                 <div className="relative">
