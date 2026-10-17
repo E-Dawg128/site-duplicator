@@ -22,8 +22,8 @@ const MenuSection = () => {
 
   const weeklyMenuImage = {
     src: weeklyMenuAsset.url,
-    alt: "Rave Bae Next Week's Meal Prep Menu - Menu 1 and Menu 2",
-    title: "NEXT WEEK'S MENU"
+    alt: "Rave Bae This Week's Meal Prep Menu - Menu 1 and Menu 2",
+    title: "THIS WEEK'S MENU"
   };
 
   const fallSpecialsImage = {
@@ -99,10 +99,10 @@ const MenuSection = () => {
               <CardContent className="p-0">
                 <div className="p-6 pb-4">
                   <h3 className="text-2xl font-bold text-center text-foreground mb-2">
-                    NEXT WEEK'S MENU
+                    THIS WEEK'S MENU
                   </h3>
                   <p className="text-sm text-center text-muted-foreground whitespace-pre-line">
-                    {"DELIVERIES: OCTOBER 19th-21st\n\nChoose from this week's menus, mix & match your favorites.\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
+                    {"DELIVERIES: OCTOBER 19th-21st\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
                   </p>
                 </div>
                 <div className="px-6 pb-6">
