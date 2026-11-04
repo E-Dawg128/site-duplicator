@@ -5,7 +5,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
 import weeklyMenuAsset from "@/assets/menu_11-8-14-26.PNG.asset.json";
-import fallSpecialsAsset from "@/assets/fallspecial.JPEG.asset.json";
+import thanksgivingMenuAsset from "@/assets/Thanksgiving_26_menu.PNG.asset.json";
 
 
 const MenuSection = () => {
@@ -27,9 +27,9 @@ const MenuSection = () => {
   };
 
   const fallSpecialsImage = {
-    src: fallSpecialsAsset.url,
-    alt: "Rave Bae Fall Blowout Specials - Meal Prep Deals",
-    title: "Fall Specials"
+    src: thanksgivingMenuAsset.url,
+    alt: "Rave Bae Thanksgiving Specials Menu - Pre-order until Nov 22nd",
+    title: "Thanksgiving Specials"
   };
 
   const allMenuImages = [fallSpecialsImage, weeklyMenuImage, menuImages[0]];
@@ -70,12 +70,17 @@ const MenuSection = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] gap-8 max-w-7xl mx-auto">
-            {/* Fall Specials */}
+            {/* Thanksgiving Specials */}
             <Card 
               className="hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden md:flex md:flex-col"
               onClick={() => openModal(0)}
             >
               <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
+                <div className="p-4 pb-2">
+                  <h3 className="text-lg font-bold text-center text-foreground whitespace-pre-line">
+                    {"THANKSGIVING SPECIALS\nPRE-ORDER UNTIL NOV 22nd"}
+                  </h3>
+                </div>
                 <div className="relative">
                   <img
                     src={fallSpecialsImage.src}
@@ -87,9 +92,6 @@ const MenuSection = () => {
                       <span className="text-sm font-medium text-foreground">Click to view full size</span>
                     </div>
                   </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-center text-foreground">{fallSpecialsImage.title}</h3>
                 </div>
               </CardContent>
             </Card>
