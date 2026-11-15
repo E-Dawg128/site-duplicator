@@ -133,6 +133,9 @@ const MenuSection = () => {
               onClick={() => openModal(2)}
             >
               <CardContent className="p-0 md:flex-grow md:flex md:flex-col md:justify-center md:items-center">
+                <div className="p-4 pb-2">
+                  <h3 className="text-lg font-semibold text-center text-foreground">{menuImages[0].title}</h3>
+                </div>
                 <div className="relative">
                   <img
                     src={menuImages[0].src}
@@ -144,9 +147,6 @@ const MenuSection = () => {
                       <span className="text-sm font-medium text-foreground">Click to view full size</span>
                     </div>
                   </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-center text-foreground">{menuImages[0].title}</h3>
                 </div>
               </CardContent>
             </Card>
