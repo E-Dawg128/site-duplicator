@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mealPrepPackagesAsset from "@/assets/Fall-meal-prep-pkgs.JPEG.asset.json";
-import weeklyMenuAsset from "@/assets/menu_11-8-14-26.PNG.asset.json";
+import weeklyMenuAsset from "@/assets/11-15-26_menu.PNG.asset.json";
 import thanksgivingMenuAsset from "@/assets/Thanksgiving_26_menu.PNG.asset.json";
 
 
@@ -104,7 +104,7 @@ const MenuSection = () => {
                     THIS WEEK'S MENU
                   </h3>
                   <p className="text-sm text-center text-muted-foreground whitespace-pre-line">
-                    {"DELIVERIES: NOVEMBER 9th-11th\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
+                    {"DELIVERIES: NOVEMBER 16th-18th\n\nLooking for something different? Custom menus are available!\n\nContact us to place your order or inquire about a custom meal prep plan."}
                   </p>
                 </div>
                 <div className="px-6 pb-6">
